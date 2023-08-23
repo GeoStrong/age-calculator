@@ -20,7 +20,7 @@ const styleError = () => {
 const printError = (invalidID, message = 'This field is required') => {
   errorMsg.forEach((error) => {
     invalidID.forEach((id) => {
-      if (error.id === id) {
+      if (error.dataset.id === id) {
         error.style.display = 'block';
         error.innerHTML = message;
       }

@@ -13,29 +13,28 @@
   <link rel="stylesheet" href="./styles/style.css">
   <script defer src="./scripts/script.js"></script>
   <title>Frontend Mentor | Age calculator app</title>
-  </style>
 </head>
 
 <body>
   <main class="main">
     <div class="component">
       <header class="header">
-        <form action="" class="form">
+        <form action="#" class="form">
           <div class="form-input__container">
             <div class="form-input__component">
               <label for="day" class="form__label ">Day</label>
               <input id="day" type="number" placeholder="DD" min="1" step="1" max="31" class="form__input">
-              <p class="error-message" id="day"></p>
+              <p class="error-message" data-id="day"></p>
             </div>
             <div class="form-input__component">
               <label for="month" class="form__label">Month</label>
               <input id="month" type="number" placeholder="MM" min="1" step="1" max="12" class="form__input">
-              <p class="error-message" id="month"></p>
+              <p class="error-message" data-id="month"></p>
             </div>
             <div class="form-input__component">
               <label for="year" class="form__label">Year</label>
               <input id="year" type="number" placeholder="YYYY" min="1" step="1" max="2024" class="form__input">
-              <p class="error-message" id="year"></p>
+              <p class="error-message" data-id="year"></p>
             </div>
           </div>
           <div class="form__footer">
@@ -47,7 +46,7 @@
           </div>
         </form>
       </header>
-      <section class="section">
+      <footer class="section">
         <ul class="list-reset section__list">
           <li class="section__item">
             <span class="value" id="years">- -</span> years
@@ -59,7 +58,7 @@
             <span class="value" id="days">- -</span> days
           </li>
         </ul>
-      </section>
+      </footer>
     </div>
   </main>
 </body>
