@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <script defer src="./scripts/script.js"></script>
+  <title>Frontend Mentor | Age calculator app</title>
+  </style>
+</head>
+
+<body>
+  <main class="main">
+    <div class="component">
+      <header class="header">
+        <form action="" class="form">
+          <div class="form-input__container">
+            <div class="form-input__component">
+              <label for="day" class="form__label ">Day</label>
+              <input id="day" type="number" placeholder="DD" min="1" step="1" max="31" class="form__input">
+              <p class="error-message" id="day"></p>
+            </div>
+            <div class="form-input__component">
+              <label for="month" class="form__label">Month</label>
+              <input id="month" type="number" placeholder="MM" min="1" step="1" max="12" class="form__input">
+              <p class="error-message" id="month"></p>
+            </div>
+            <div class="form-input__component">
+              <label for="year" class="form__label">Year</label>
+              <input id="year" type="number" placeholder="YYYY" min="1" step="1" max="2024" class="form__input">
+              <p class="error-message" id="year"></p>
+            </div>
+          </div>
+          <div class="form__footer">
+            <span class="line"></span>
+            <button class="btn-reset btn" type="submit">
+              <img src="./assets/images/icon-arrow.svg" alt="arrow">
+            </button>
+            <span class="line line--second"></span>
+          </div>
+        </form>
+      </header>
+      <section class="section">
+        <ul class="list-reset section__list">
+          <li class="section__item">
+            <span class="value" id="years">- -</span> years
+          </li>
+          <li class="section__item">
+            <span class="value" id="months">- -</span> months
+          </li>
+          <li class="section__item">
+            <span class="value" id="days">- -</span> days
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>

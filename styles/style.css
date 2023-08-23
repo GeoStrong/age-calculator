@@ -1,0 +1,241 @@
+html {
+    box-sizing: border-box;
+    font-size: calc(100vw / 1440 * 10);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    list-style: none;
+}
+
+.btn-reset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-neutral-light-grey);
+}
+
+.btn {
+    padding: 2.4rem;
+    border-radius: 50%;
+    background-color: var(--color-primary-purple);
+}
+
+.value {
+    color: var(--color-primary-purple)
+}
+
+:root {
+    --color-primary-purple: #854dff;
+    --color-primary-red: #ff5757;
+    --color-neutral-white: #fff;
+    --color-neutral-off-white: #f0f0f0;
+    --color-neutral-grey: #868383;
+    --color-neutral-light-grey: #dbdbdb;
+    --color-neutral-smokey-grey: #716f6f;
+    --color-neutral-off-black: #141414;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+    background-color: var(--color-neutral-off-white)
+}
+
+.main {
+    height: 100vh;
+    display: grid;
+    grid-template: 1fr / 1fr;
+}
+
+.component {
+    min-width: 84rem;
+    justify-self: center;
+    align-self: center;
+    padding: 5.6rem;
+    border-radius: 24px 24px 200px 24px;
+    background-color: var(--color-neutral-white);
+}
+
+.form-input__container {
+    display: flex;
+    gap: 3.2rem;
+    margin-bottom: 2rem;
+}
+
+.form-input__component {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.form__label {
+    font-size: 1.4rem;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--color-neutral-smokey-grey);
+}
+
+.form__input {
+    max-width: 16rem;
+    padding: 2rem 2.4rem;
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: 0.32px;
+    border-radius: 8px;
+    color: var(--color-neutral-off-black);
+    border: 1px solid var(--color-neutral-light-grey)
+}
+
+.form__input:focus {
+    outline: none;
+    border-color: var(--color-primary-purple)
+}
+
+.form__input::placeholder {
+    color: var(--color-neutral-grey);
+}
+
+.form__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section__list {
+    font-size: 10.4rem;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 110%;
+    letter-spacing: -2.08px;
+    color: var(--color-neutral-off-black);
+}
+
+.line--second {
+    display: none;
+}
+
+.error-label {
+    color: var(--color-primary-red);
+}
+
+.error-input {
+    border-color: var(--color-primary-red);
+}
+
+.error-input:focus {
+    border-color: var(--color-primary-red);
+}
+
+.error-message {
+    display: none;
+    margin: 0;
+    margin-top: 1rem;
+    position: absolute;
+    top: 100%;
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--color-primary-red);
+}
+
+.btn[disabled] {
+    background-color: rgb(160, 156, 156);
+    pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: calc(100vw / 992 * 10);
+    }
+}
+
+@media (max-width: 576px) {
+    .component {
+        min-height: 65vh;
+    }
+
+    .header {
+        margin-bottom: 9rem;
+    }
+
+    .form-input__container {
+        justify-content: space-between;
+        margin-bottom: 8rem;
+    }
+
+    .form__label {
+        font-size: 3rem;
+        letter-spacing: 1px;
+    }
+
+    .form__input {
+        min-width: 22rem;
+        font-size: 5rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .btn {
+        width: 36rem;
+    }
+
+    .line--second {
+        display: block;
+    }
+
+    .section__list {
+        font-size: 15rem;
+    }
+
+    .error-message {
+        font-size: 2.2rem;
+    }
+}
+
+@media (hover: hover) {
+    .btn:hover {
+        background-color: var(--color-neutral-off-black);
+    }
+
+    .form__input:hover {
+        border-color: var(--color-primary-purple)
+    }
+
+    .error-input:hover {
+        border-color: var(--color-primary-red);
+    }
+}
